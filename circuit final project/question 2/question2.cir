@@ -1,0 +1,24 @@
+* C:\Users\hp pro\Desktop\circuit final project\question 2\question2.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sat Jun 19 23:49:43 2021
+
+
+.PARAM         Rl=60 
+
+** Analysis setup **
+.DC LIN PARAM Rl 1 60 1 
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "question2.net"
+.INC "question2.als"
+
+
+.probe
+
+
+.END

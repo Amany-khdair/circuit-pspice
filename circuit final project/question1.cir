@@ -1,0 +1,22 @@
+* C:\Users\hp pro\Desktop\circuit final project\question1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sat Jun 19 18:44:15 2021
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "question1.net"
+.INC "question1.als"
+
+
+.probe
+
+
+.END

@@ -1,0 +1,121 @@
+
+**** 06/19/21 23:56:20 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp pro\Desktop\circuit final project\question 2\question2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sat Jun 19 23:49:43 2021
+
+
+.PARAM         Rl=60 
+
+** Analysis setup **
+.DC LIN PARAM Rl 1 60 1 
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "question2.net"
+
+**** INCLUDING question2.net ****
+* Schematics Netlist *
+
+
+
+R_R2         0 $N_0001  8  
+R_R3         0 $N_0002  {Rl}  
+I_I2         $N_0001 $N_0002 DC 8A  
+E_E1         $N_0002 $N_0003 $N_0001 0 2
+R_R1         $N_0003 $N_0001  7  
+I_I1         0 $N_0003 DC 1A  
+
+**** RESUMING question2.cir ****
+.INC "question2.als"
+
+
+
+**** INCLUDING question2.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R2            R2(1=0 2=$N_0001 )
+R_R3            R3(1=0 2=$N_0002 )
+I_I2            I2(+=$N_0001 -=$N_0002 )
+E_E1            E1(3=$N_0002 4=$N_0003 1=$N_0001 2=0 )
+R_R1            R1(1=$N_0003 2=$N_0001 )
+I_I1            I1(+=0 -=$N_0003 )
+.ENDALIASES
+
+
+**** RESUMING question2.cir ****
+.probe
+
+
+.END
+
+**** 06/19/21 23:56:20 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp pro\Desktop\circuit final project\question 2\question2.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)     .3516                   ($N_0002)   57.3630                       
+
+($N_0003)   56.6590                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 06/19/21 23:56:20 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp pro\Desktop\circuit final project\question 2\question2.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_E1      
+V-SOURCE     7.033E-01
+I-SOURCE     7.044E+00
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

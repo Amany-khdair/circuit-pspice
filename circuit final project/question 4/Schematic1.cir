@@ -1,0 +1,23 @@
+* C:\Users\hp pro\Desktop\circuit final project\question 4\Schematic1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Jun 20 20:03:55 2021
+
+
+
+** Analysis setup **
+.ac DEC 100 100 100K
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+.INC "Schematic1.als"
+
+
+.probe
+
+
+.END

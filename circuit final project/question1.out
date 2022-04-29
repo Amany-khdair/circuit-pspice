@@ -1,0 +1,144 @@
+
+**** 06/19/21 18:54:58 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp pro\Desktop\circuit final project\question1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sat Jun 19 18:44:15 2021
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "question1.net"
+
+**** INCLUDING question1.net ****
+* Schematics Netlist *
+
+
+
+R_R1         $N_0002 $N_0001  50  
+R_R2         $N_0003 $N_0001  28  
+R_R3         $N_0004 $N_0003  78  
+R_R4         $N_0005 $N_0004  72  
+V_V1         $N_0003 0 100V
+E_E1         $N_0001 0 $N_0001 $N_0002 0.2
+G_G1         0 $N_0004 $N_0001 $N_0003 0.02
+H_H1         $N_0005 0 VH_H1 5
+VH_H1        $N_0002 $N_0004 0V
+
+**** RESUMING question1.cir ****
+.INC "question1.als"
+
+
+
+**** INCLUDING question1.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=$N_0002 2=$N_0001 )
+R_R2            R2(1=$N_0003 2=$N_0001 )
+R_R3            R3(1=$N_0004 2=$N_0003 )
+R_R4            R4(1=$N_0005 2=$N_0004 )
+V_V1            V1(+=$N_0003 -=0 )
+E_E1            E1(3=$N_0001 4=0 1=$N_0001 2=$N_0002 )
+G_G1            G1(3=0 4=$N_0004 1=$N_0001 2=$N_0003 )
+H_H1            H1(3=$N_0005 4=0 )
+VH_H1           H1(1=$N_0002 2=$N_0004 )
+.ENDALIASES
+
+
+**** RESUMING question1.cir ****
+.probe
+
+
+.END
+
+**** 06/19/21 18:54:58 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp pro\Desktop\circuit final project\question1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    3.0710                   ($N_0002)  -12.2840                       
+
+($N_0003)  100.0000                   ($N_0004)  -12.2840                       
+
+($N_0005)    1.5355                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.901E+00
+    VH_H1        3.071E-01
+
+    TOTAL POWER DISSIPATION   4.90E+02  WATTS
+
+
+**** 06/19/21 18:54:58 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\hp pro\Desktop\circuit final project\question1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         G_G1      
+I-SOURCE    -1.939E+00
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_E1      
+V-SOURCE     3.071E+00
+I-SOURCE     3.155E+00
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         H_H1      
+V-SOURCE     1.536E+00
+I-SOURCE    -1.919E-01
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+

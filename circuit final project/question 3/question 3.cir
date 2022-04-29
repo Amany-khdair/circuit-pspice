@@ -1,0 +1,22 @@
+* C:\Users\hp pro\Desktop\circuit final project\question 3\question 3.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Jun 20 16:42:56 2021
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "question 3.net"
+.INC "question 3.als"
+
+
+.probe
+
+
+.END

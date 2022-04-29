@@ -1,0 +1,19 @@
+*version 9.1 2463992159
+@index
+symloc question2 0 390
+*symbol question2
+d 
+@type p
+@attributes
+a 0 u 0:13 0 0 0 hln 100 ipin(0)=0
+a 0 sp 9 0 0 0 hln 100 REFDES=HS?
+a 0 sp 11 0 0 26 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=question2
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %0 @model
+@views
+a 0 u 13 0 0 0 hln 100 DEFAULT=question2.sch
+@pins
+p 2 20 -5 dcn 100 0 n 20 -10 d
+a 0 s 1 0 42 -12 hln 100 PIN=1
+@graphics 50 16 0 0 10
+r 0 10 0 40 16
